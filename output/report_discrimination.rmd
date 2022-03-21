@@ -1,8 +1,11 @@
 ---
-title: "A Systematic Review of the Discrimination Against individuals based on Sexual orientation in Australian society"
+title: A Systematic Review of the Discrimination Against individuals based on Sexual
+  orientation in Australian society
 author: "Jiongan Wang"
 date: "20/03/2022"
-output: html_document
+output:
+  pdf_document: default
+  html_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -32,6 +35,8 @@ The term “Lesbian, Gay, Bisexual, and transgender”(LGBT) is an umbrella term
  
 The data was collected during the onset of the pandemic when there was general pessimism about various aspects of life in Australian inhabitants. The comparison with the previous year 2019 will be somewhat biased due to the lack of pandemics in the previous year. The transgender community part of an intersex group of individuals was not part of the survey as it was limited more based on sexual orientation. Above form the weakness in our study results. Overall, the questions asked in the survey resulted in giving direction to the research findings. Regular quarterly surveys will bring more insights to the study.
 
+The report is hosted on <https://github.com/wangjio5/SocialSurvey/tree/main/output>
+
 ## 2.0 Introduction
 
 Equality and non-discrimination are fundamental rights that should be the same for all persons clear of their sexual orientation or identity of their gender. People of minority communities such as those belonging to LGBT have been alienated in society for many generations. With more awareness on such social causes and with many governments, across the world, legalizing gay marriages the level of acceptance should have increased in society. This research aims to find if the LGBT section of society is still marginalized when compared to people with heterosexual orientation. The major aim of the research is how this section of society fares on topics such as being part of the society, safety, and security, access to public health, and general stress levels.
@@ -53,7 +58,8 @@ Some limitations may arise due to remote areas left out of the survey. People li
 
 The breakup of the households responses involved in interview are as follows
 
-#### Table: household response breakup
+
+<br><br>
 
 ```{r,INSERT TABLE, echo=FALSE}
 library(knitr)
@@ -64,6 +70,8 @@ data1 %>%
   kable_classic_2(full_width = F,position="left")
 
 ```
+
+#### Table: household response breakup
 
 
 Source: Australian Bureau of Statistics, General Social Survey: Summary Results, Australia methodology 2020
@@ -266,7 +274,7 @@ m+scale_color_manual(name = "Feels Police can Trusted", values = c("red4" = "red
 
 
 
-```{r,Trust 3  ,echo=FALSE}
+```{r,Trust22,echo=FALSE}
 
 m<-data_survey%>% filter(Key=="Trust.16" | Key=="Trust.17"| Key=="Trust.18")%>%
 ggplot( aes(x = 1, y = Het_P, fill = Key))+
@@ -381,9 +389,10 @@ Further studies should overcome these limitations.
 
 Additional Questionaire to get more insight below is placed at below link
 
-<https://www.surveymonkey.com/r/5VRG3XW>[link](Link to the Survey)
+<https://www.surveymonkey.com/r/5VRG3XW>
 
-image:
+
+glimpse of Additional Questionnaire:
 ![Caption](smallorb.png) 
 
 
